@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Test</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Poppins");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins";
+        }
+        .top-nav {
+            background-color: rgb(126, 218, 126);
+            color: white;
+            text-align: center;
+            font-weight: bolder;
+            display: flex;
+            justify-content: end;
+            padding: 10px 40px;
+        }
+        .top-nav-div {
+            display: flex;
+            gap: 25px;
+        }
+        .logo {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            /* gap: 20px; */
+        }
+        .logo-img img {
+            width: 120px;
+        }
+        .iso img {
+            width: 120px;
+        }
+        .main-navbar {
+            display: grid;
+            place-items: center;
+            background-color: rgb(253, 237, 237);
+            padding: 10px;
+        }
+        .main-navbar ul {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            font-size: 20px;
+        }
+        .main-navbar ul li a {
+            text-decoration: none;
+            color: #212529;
+        }
+        .video video {
+            width: 100%;
+        }
+        .admission span {
+            background-color: rgb(126, 218, 126);
+            color: white;
+            font-size: 23px;
+            font-weight: 500;
+            padding: 10px;
+            transform: rotate(-90deg);
+            position: fixed;
+            bottom: 50%;
+            left: -40px;
+        }
+        .admission-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(16, 160, 196, 0.8);
+            color: white;
+            width: 100%;
+            height: 340px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .admission-container ul li {
+            position: relative;
+            display: inline-block;
+        }
+        .admission-container ul li::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-top: 4px;
+        }
+        .mid-container {
+            width: 100%;
+            height: 544px;
+            display: grid;
+            place-items: center;
+        }
+
+        .mid-container .container {
+            width: 80%;
+            height: 90%;
+            background-color: antiquewhite;
+            
+        }
+        .mid-container .container ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+        .mid-container .container ul li {
+            width: 200px;
+            height: 250px;
+            padding: 20px;
+            background-color: indianred;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="top-nav">
+            <div class="top-nav-div">
+                <p>Admission</p>
+                <p>Online Payment</p>
+            </div>
+        </div>
+
+        <div class="logo">
+            <a href="" class="title">
+                <img src="https://www.mestoamcollegekunnukara.com/resourcesmes/images/mes_logo.png" alt="">
+            </a>
+            <a href="" class="logo-img">
+                <img src="https://www.mestoamcollegekunnukara.com/resourcesmes/images/mg_logo.png" alt="">
+            </a>
+            <a href="" class="iso">
+                <img src="https://www.mestoamcollegekunnukara.com/resourcesmes/images/iso90012015_logo.png" alt="">
+            </a>
+        </div>
+
+        <div class="main-navbar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">Institution</a>
+                    <i class="fa-solid fa-angle-down"></i>
+                </li>
+                <li>
+                   <a href="">Academics</a>
+                   <i class="fa-solid fa-angle-down"></i>
+                </li>
+                <li>
+                    <a href="">Departments</a>
+                    <i class="fa-solid fa-angle-down"></i>
+                </li>
+                <li>
+                    <a href="">IQAC</a>
+                    <i class="fa-solid fa-angle-down"></i>
+                    </li>
+                <li>
+                    <a href="">Resources</a>
+                    <i class="fa-solid fa-angle-down"></i>
+                    </li>
+                </li>
+                <li>
+                    <a href="">NIRF</a>
+                    <i class="fa-solid fa-angle-down"></i>
+                    </li>
+                </li>
+                <li>
+                    <a href="">Student's zone</a>
+                    <i class="fa-solid fa-angle-down"></i>
+                    </li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="video">
+            <video autoplay loop muted>
+                <source src="https://www.mestoamcollegekunnukara.com/assets/LMS/MES1/cms/template/20250121111518970.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="admission">
+            <span>Admission</span>
+        </div>
+    </nav>
+
+    <section class="admission-container">
+        <h2 style="font-weight: bolder; font-size: 3rem;">admission</h2>
+        <ul style="text-transform: uppercase; display: flex; justify-content: center; gap: 10px; width: 200px; list-style: none; margin: 0 auto;">
+            <li>home</li>
+            <li>admission</li>
+        </ul>
+    </section>
+
+    <section class="mid-container">
+        <div class="container">
+            <ul style="list-style: none;">
+                <li>
+                    <img src="" alt="">
+                    <p>Admissions 2024-2025</p>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <p>UG Programme List</p>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <p>PG Programme List</p>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <p>Fee Structure</p>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <p>FAQ</p>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <p>MGU CAP</p>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <p>Prospectus</p>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    
+</body>
+</html>
