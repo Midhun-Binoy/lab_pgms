@@ -1,149 +1,229 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
+html {
+  scroll-behavior: smooth;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
 }
 .top-nav {
-    background-color: rgb(126, 218, 126);
-    color: white;
-    text-align: center;
-    font-weight: bolder;
-    display: flex;
-    justify-content: end;
-    padding: 10px 40px;
+  background-color: rgb(126, 218, 126);
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  display: flex;
+  justify-content: end;
+  padding: 10px 40px;
 }
 .top-nav-div {
-    display: flex;
-    gap: 25px;
+  display: flex;
+  gap: 25px;
 }
 .logo {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 6px;
-    /* gap: 20px; */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 6px;
+  /* gap: 20px; */
 }
 .logo div a {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 .logo-img img {
-    width: 70px;
+  width: 70px;
 }
 .iso img {
-    width: 70px;
+  width: 70px;
 }
 .main-navbar {
-    display: grid;
-    place-items: center;
-    background-color: rgb(253, 237, 237);
-    padding: 10px;
+  display: grid;
+  place-items: center;
+  background-color: rgb(253, 237, 237);
+  padding: 10px;
 }
 .main-navbar ul {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    font-size: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 20px;
 }
 .main-navbar ul li a {
-    text-decoration: none;
-    color: #212529;
+  text-decoration: none;
+  color: #212529;
 }
 .video video {
-    width: 100%;
+  width: 100%;
 }
-.admission span {
-    background-color: rgb(126, 218, 126);
-    color: white;
-    font-size: 23px;
-    font-weight: 500;
-    padding: 10px;
-    transform: rotate(-90deg);
-    position: fixed;
-    bottom: 50%;
-    left: -40px;
+.admission a {
+  text-decoration: none;
+  background-color: rgb(126, 218, 126);
+  color: white;
+  font-size: 23px;
+  font-weight: 500;
+  padding: 10px;
+  transform: rotate(-90deg);
+  position: fixed;
+  bottom: 50%;
+  left: -40px;
 }
 .admission-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(16, 160, 196, 0.8);
-    color: white;
-    width: 100%;
-    height: 340px;
-    text-align: center;
-    text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(16, 160, 196, 0.8);
+  color: white;
+  width: 100%;
+  height: 340px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .admission-container ul li {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 .admission-container ul li::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-top: 4px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: lightgray;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: 4px;
 }
 
 .flash-news {
-    display: flex;
-    align-items: center;
-    background-color: rgb(126, 218, 126);
-    margin: 0 auto;
-    padding: 8px 100px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  background-color: rgb(126, 218, 126);
+  margin: 0 auto;
+  padding: 8px 100px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
 }
 
 .flash-news .newspaper {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    margin-right: 20px;
-    padding: 4px;
-    border-right: 3px solid white;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: 20px;
+  padding: 4px;
+  border-right: 3px solid white;
 }
 
 .flash-news .newspaper div {
-    text-align: center;
-    /* display: inline-block; */
-    white-space: nowrap;
-    /* background-color: blue; */
-    width: fit-content;
+  text-align: center;
+  /* display: inline-block; */
+  white-space: nowrap;
+  /* background-color: blue; */
+  width: fit-content;
 }
 
 /* mid-container */
 .mid-container {
-    width: 100%;
-    height: 544px;
-    display: grid;
-    place-items: center;
+  width: 100%;
+  height: 544px;
+  display: grid;
+  place-items: center;
 }
 
 .mid-container .container {
-    width: 80%;
-    height: 90%;
-    background-color: antiquewhite;
-    
+  width: 80%;
+  height: 90%;
+  /* background-color: antiquewhite; */
 }
 .mid-container .container ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: auto;
-    gap: 20px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: auto;
+  gap: 20px;
+  /* background-color: lightblue; */
+}
+.mid-container .container ul li:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 .mid-container .container ul li {
-    width: 200px;
-    height: 250px;
-    padding: 20px;
-    background-color: indianred;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 230px;
+  padding: 20px;
+  margin: 0;
+  background-color: white;
+  text-align: center;
+  vertical-align: center;
+  box-shadow: 5px 5px 30px gray;
+}
+.mid-container .container ul li img {
+  width: 140px;
+  height: 160px;
+}
+.mid-container .container ul li p {
+  padding: 0 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* welcome */
+.welcome {
+  background: url(https://elearn.nptel.ac.in/wp-content/uploads/2024/01/Effective-Teaching.jpg) no-repeat center/cover;
+  height: 470px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.welcome::before {
+  content: "";
+  background-color: aqua;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+.welcome .welcome-text {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  /* background-color: blueviolet; */
+  font-weight: bolder;
+  color: white;
+  border-right: 5px solid white;
+}
+.welcome .text-container {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  color: white;
+}
+.welcome .text-container button {
+  width: fit-content;
+  margin-top: 15px;
+  padding: 4px 7px;
+  border-radius: 2px;
+  border: none;
+  background-color: green;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.welcome .text-container button:hover {
+  background-color: lightgreen;
+  color: black;
 }
