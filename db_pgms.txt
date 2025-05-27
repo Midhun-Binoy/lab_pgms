@@ -1,0 +1,62 @@
+empdeldisp.php
+ <!DOCTYPE html>
+<head>
+ <title>EDIT</title>
+ </head>
+<body bgcolor="#f08080">
+ <table border=2 width=50%>
+ <tr>
+ <th>ID</th>
+ <th>Name</th>
+ <th>Salary</th> 
+ </tr>
+ <?php
+ 
+ include 'codb1.php';
+ $sql = "SELECT * from emp1";
+ $result = $conn->query($sql);
+ while ($row = $result->fetch_assoc())
+ {
+ echo "<tr><td>".$row['empid']."</td>";
+ echo "<td>".$row['ename']."</td>";
+ echo "<td>".$row['sal']."</td>";
+ echo "<td><a href='empdel.php?empid=". $row['empid'] ."'>Delete</a ></td>";
+
+
+
+
+empdel.php
+<?php
+include 'codb1.php';
+$eid = $_GET['empid']; 
+$sql = "SELECT * FROM emp1 WHERE empid = '$eid'"; 
+$result = $conn->query($sql) ;
+$row = $result->fetch_assoc();
+?>
+<form method="post" >
+<table>
+<tr>
+<td>Number:</td>
+<td><input type="text" name="id" value="<? echo "$row[empid]" ?>"></td>
+</tr>
+<tr>
+<td>Name:</td>
+<td><input type="text" name="en" value="<? echo "$row[ename]" ?>"></td>
+</tr>
+<tr>
+<td>Salary:</td>
+<td><input type="text" name="sa" value="<? echo "$row[sal]" ?>"></td>
+</tr>
+<tr>
+<td><input type="submit" name="submit" value ="Delete"></td>
+</tr>
+</table>
+</form>
+<?php
+if($_POST)
+{
+ $id=$_POST['id'];
+ $en=$_POST['en'];
+ $s=$_POST['sa'];
+$del="delete from emp1 where empid='".$id."'";
+if ($conn->query($del) === TRUE) {
